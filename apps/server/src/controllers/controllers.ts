@@ -1,5 +1,6 @@
 import { UserModel, ContentModel, TagModel,LinkModel } from "../db/db";
 import bcrypt from 'bcrypt';
+import {signupSchema} from 
 import jwt from "jsonwebtoken";
 
 export const signup = (req,res) => {

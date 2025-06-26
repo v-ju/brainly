@@ -8,7 +8,7 @@ interface User extends Document {
 
 interface Content extends Document{
     title: String,
-    link: String,
+    url: String,
     type: String,
     tags: Types.ObjectId[];
     userId: Types.ObjectId;
@@ -43,18 +43,20 @@ const userSchema = new Schema<User>({
     }
 },{timestamps: true})
 
+const urlType = ['twitter' , 'youtube' , 'article']
 
 const contentSchema = new Schema<Content>({
     title: {
         type: String,
         required:true
     },
-    link: {
+    url: {
         type: String,
         required:true
     },
     type: {
         type: String,
+        enum: urlType,
         required:true
     },
     tags: [{
