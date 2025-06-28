@@ -49,6 +49,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      '@repo/zod':
+        specifier: workspace:*
+        version: link:../../packages/zod
 
   packages/eslint-config:
     devDependencies:
@@ -122,7 +125,11 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/zod: {}
+  packages/zod:
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
 packages:
 

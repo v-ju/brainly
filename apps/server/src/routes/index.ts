@@ -1,30 +1,30 @@
-import express from 'express'
-import { signup } from '../controllers/controllers';
+import express, { Router } from 'express'
+import { signup } from '../controllers/controllers.js';
 
 
-const router = express.Router();
+const router: Router = Router();
 
 router.post('/signup', signup)
 
 
-router.post('/signin',(req,res) => {
+// router.post('/signin',(req,res) => {
 
-})
+// })
 
-router.post('/content',(req,res) => {
+// router.post('/content',(req,res) => {
 
-})
+// })
 
-router.get('/content',(req,res) => {
+// router.get('/content',(req,res) => {
 
-})
+// })
 
-router.delete('/content',(req,res) => {
+// router.delete('/content',(req,res) => {
 
-})
+// })
 
-router.get('/brain/:shareLink', () => {
+// router.get('/brain/:shareLink', () => {
 
-})
+// })
 
 export default router
